@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+::-webkit-scrollbar {
+  width: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  user-select: none;
+  font-family: "Nunito", sans-serif;
+  background: #111;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+#container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+section {
+  scroll-snap-align: center;
+}
+.phone {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+.phone a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-left: 0.5em;
+}
+@media only screen and (max-width: 768px) {
+  .numberphone {
+    display: none;
+  }
+}
+.logo {
+  position: fixed;
+  width: 100px;
+  margin: 1em;
+  filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+  transition: 1s;
+  z-index: 99;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+#media {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+#media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+#media li {
+  list-style: none;
+  padding: 1em;
+  transition: 1s;
+}
+#media a {
+  color: #fff;
+}
+#media li:hover {
+  transform: scale(1.4);
+  filter: drop-shadow(0px 3px 3px rgba(145, 0, 0, 0.76));
+}
+#hood {
+  height: 4em;
+  border-radius: 0% 0% 50% 50% / 0% 0% 20% 20%;
+  width: 100%;
+  background: url(carbon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  z-index: 97;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+  border-bottom: rgb(8, 8, 8) 1px solid;
+}
+#jumbotron {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  transition: 1s;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#jumbotron img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+}
+.emblem {
+  margin-bottom: 1em;
+  position: absolute;
+  bottom: 0;
+  height: 2.6em;
+  transition: 1s;
+}
+#hood.open .emblem {
+  margin: 1em;
+}
+
+#hood h1 {
+  background-color: #8f3c37;
+  padding: 1em;
+  font-size: 1.3rem;
+  border-radius: 1em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 1s;
+}
+#hood h1:hover {
+  background: #a14a46;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+}
+/* loader */
+.loader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(carbon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 100;
+}
+.load-icon {
+  width: 250px;
+}
+.wrapper {
+  position: relative;
+  background: #333;
+  height: 35em;
+  width: 35em;
+  border-radius: 5%;
+  max-width: 90vw;
+  transition: 0.5s;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.appointments {
+  height: 35em;
+  width: 35em;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  max-width: 90vw;
+  transition: 0.5s;
+}
+
+.title {
+  color: white;
+  font-size: 1.3rem;
+  width: 100%;
+  text-align: center;
+  padding: 1em 0em 1em 0em;
+  border-bottom: 1px solid rgb(70, 70, 70);
+  font-weight: bold;
+}
+
+.input-generic {
+  width: 90%;
+  padding: 1em;
+  background: rgb(190, 190, 190);
+  border-radius: 10%;
+  font-weight: bold;
+  border: none;
+  font-size: 1em;
+  outline: none;
+}
+
+.next {
+  width: 90%;
+  padding: 1.5em;
+  background: rgb(200, 200, 200);
+  background: #8f3c37;
+  border-radius: 10%;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: white;
+  transition: 0.5s;
+  outline: none;
+  cursor: pointer;
+}
+
+.next:hover {
+  transform: scale(0.95);
+}
+
+.big-next {
+  width: 100%;
+  text-align: center;
+  padding: 1em;
+}
+
+.field {
+  width: 100%;
+  text-align: center;
+}
+
+.button-container {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.back-small,
+.next-small {
+  text-align: center;
+  width: 45%;
+  padding: 1.5em;
+  background: rgb(200, 200, 200);
+  background: #8f3c37;
+  border-radius: 10%;
+  font-weight: bold;
+  color: white;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.back-small:hover,
+.next-small:hover {
+  transform: scale(0.95);
+}
+
+.problem {
+  width: 90%;
+  padding: 1em 1em;
+  background: rgb(190, 190, 190);
+  border-radius: 2%;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1em;
+  text-align: start;
+  outline: none;
+}
+
+.field-overflow {
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  height: 25em;
+  text-align: center;
+}
+
+.step-2,
+.step-3,
+.step-4,
+.step-5,
+.step-6 {
+  transform: translateX(35em);
+}
+
+.success {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-info {
+  position: relative;
+  background: #333;
+  height: 35em;
+  width: 35em;
+  border-radius: 5%;
+  max-width: 90vw;
+  transition: 0.5s;
+  border: 1px solid black;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.request {
+  width: 90%;
+  background-color: rgb(200, 200, 200);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10%;
+}
+
+.complete {
+  color: black;
+  border-bottom: #555 solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fa-check-circle {
+  color: rgb(0, 0, 0);
+}
+.fa-check-circle,
+.fa-exclamation-circle {
+  padding: 1em;
+  font-family: nunito;
+  font-weight: 400;
+}
+.alert .fa-exclamation-circle {
+  color: #e9dd77;
+}
+
+.appointment-number {
+  color: black;
+  padding: 1em;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.complete h2 {
+  padding: 1em;
+  font-weight: 700;
+}
+
+.alert {
+  padding: 1em;
+  width: 90%;
+}
+.alert h3 {
+  font-weight: lighter;
+}
+
+.thanks {
+  width: 90%;
+  padding: 1em;
+}
+.thanks h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1em;
+}
+
+.thanks h4 {
+  text-align: center;
+  font-weight: 400;
+}
+
+.emailmain {
+  color: white;
+  text-decoration: none;
+}
+
+.field1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#page {
+  height: 100vh;
+  width: 100%;
+  background: url(carbon.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35em;
+}
+
+.text-title {
+  width: 100%;
+}
+
+.text-title span {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  margin: 0.5em 0;
+}
+
+.about
+p,
+h4 {
+  margin: 1em;
+  width: 100%;
+  text-align: left;
+}
+.about h4 {
+  font-size: 1.4rem;
+}
+.services {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.about span {
+  width: 60ch;
+}
+
+
+
+.thing {
+  margin: 0.2em;
+}
+
+.up-arrow-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 2em;
+  width: 2em;
+  margin: 1em;
+  filter: drop-shadow(-1px 6px 3px rgba(0, 0, 0, 0.5));
+  transition: 0.5s ease;
+  opacity: 0;
+}
+.up-arrow {
+  position: inherit;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #fff;
+}
+.up-arrow-container:hover {
+  transform: scale(1.1);
+}
+
+#jumbotron h1 {
+  margin-top:10rem;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  font-size: 2.2rem;
+}
+#jumbotron h1 span {
+  font-weight: bolder;
+  color: #cc4c4c;
+}
+
+.schedulenow {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  bottom: 0;
+  margin-bottom: 4rem;
+  background-color: #8f3c37;
+  padding: 0.8em;
+  border-radius: 1em;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.schedulenow:hover {
+  transform: scale(1.1);
+}

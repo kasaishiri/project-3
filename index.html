@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bullet Appointments</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <img src="bullet.png" alt="logo" class="logo" />
+      <div class="phone">
+        <a href="tel:7145564269">
+          <i class="fas fa-phone"></i>
+          <a class="numberphone" href="tel:7145564269">714.556.4269</a>
+        </a>
+      </div>
+
+      <section class="loader">
+        <img src="bullet.png" alt="logo" class="load-icon" />
+      </section>
+      <section id="hood">
+        <img src="bmw.svg" alt="" class="emblem" />
+        <!-- <h1>Request An Appointment</h1> -->
+      </section>
+      <section id="jumbotron">
+        <h1>
+          Full range of <span>BMW</span> Services at
+          <span>Affordable Rates</span>
+          <div>family owned since 1996</div>
+        </h1>
+        <img src="work17.jpg" alt="" />
+        <div class="schedulenow">Schedule Now</div>
+
+        <a href="#page" class="schedulenow">Schedule Now</a>
+      </section>
+      <section id="page">
+        <div class="about">
+          <div class="text-title">
+            <span>Bullet performance</span>
+            <h3>Orange County BMW Experts</h3>
+          </div>
+          <p>
+            Bullet Performance Engineering, Inc. is the one-stop auto repair
+            shop you need, providing a complete range of car care services at
+            affordable rates. Fully equipped to handle all of your maintenance
+            and repair needs, our state-of-the-art automotive center offers
+            computer diagnostics, factory scheduled maintenance checks, quick
+            turnaround times and certified general mechanics to tackle any issue
+            on any and all BMW/MINI makes and models. For exceptional client
+            care, impeccable services and competitive rates Bullet Performance
+            Engineering, Inc. is the company for you. We take care of car
+            troubles and have our clients back on the road in no time.
+          </p>
+          <h4>Services Include</h4>
+
+          <ul class="services">
+            <li class="thing">Oil changes</li>
+            <li class="thing">Radiator repair</li>
+            <li class="thing">Paintless dent repair</li>
+            <li class="thing">Auto glass repair and replacement</li>
+            <li class="thing">Brake check and repair</li>
+            <li class="thing">Exhaust system repair</li>
+            <li class="thing">Transmission repairEngine repair</li>
+            <li class="thing">Tire rotation and wheel alignment</li>
+            <li class="thing">Inspections and preventative maintenance</li>
+            <li class="thing">Check engine light diagnostics and repair</li>
+          </ul>
+        </div>
+        <form class="wrapper">
+          <!-- Step 1 -->
+          <div class="appointments step-1">
+            <div class="title">Request an appointment</div>
+            <div class="field1">
+              <i class="fas fa-exclamation-circle"></i>
+              <p>Appointments can take up to 1 business day to be confirmed.</p>
+            </div>
+            <div class="field">
+              <input type="date" class="input-generic" name="date" />
+              <br />
+              <br />
+              <input type="time" class="input-generic" name="time" />
+            </div>
+            <div class="big-next">
+              <button type="button" class="next">Next</button>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div class="appointments step-2">
+            <div class="title">Your vehicle information</div>
+            <div class="field">
+              <input
+                type="text"
+                class="input-generic"
+                placeholder="BMW or Mini Model"
+              />
+              <br />
+              <br />
+              <input
+                type="number"
+                class="input-generic"
+                placeholder="Vehicle Year"
+              />
+              <br />
+              <br />
+              <input
+                type="text"
+                class="input-generic"
+                placeholder="Last 7 of VIN (optional)"
+              />
+            </div>
+            <div class="button-container">
+              <button type="button" class="back-small back-small-1">
+                Back
+              </button>
+              <button type="button" class="next-small next-small-1">
+                Next
+              </button>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="appointments step-3">
+            <div class="title">What does your car need?</div>
+            <div class="field">
+              <textarea
+                name="problem"
+                class="problem"
+                cols="30"
+                rows="19"
+                placeholder="Whats going on with your car?"
+              ></textarea>
+            </div>
+            <div class="button-container">
+              <button type="button" class="back-small back-small-2">
+                Back
+              </button>
+              <button type="button" class="next-small next-small-2">
+                Next
+              </button>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="appointments step-4">
+            <div class="title">Contact</div>
+            <div class="field">
+              <input
+                type="text"
+                class="input-generic"
+                placeholder="First Name"
+                name="firstname"
+              />
+              <br />
+              <br />
+              <input
+                type="text"
+                class="input-generic"
+                placeholder="Last Name"
+                name="lastname"
+              />
+              <br />
+              <br />
+              <input
+                type="email"
+                class="input-generic"
+                placeholder="Email"
+                name="email"
+              />
+              <br />
+              <br />
+              <input
+                type="tel"
+                class="input-generic"
+                placeholder="Phone Number"
+                name="phone"
+              />
+            </div>
+            <div class="button-container">
+              <button type="button" class="back-small back-small-3">
+                Back
+              </button>
+              <button type="button" class="next-small next-small-3">
+                Next
+              </button>
+            </div>
+          </div>
+          <!-- Step 5 -->
+          <div class="appointments step-5">
+            <div class="title">Summary and confirm</div>
+            <div class="field-overflow"></div>
+            <div class="button-container">
+              <button type="button" class="back-small back-small-4">
+                Back
+              </button>
+              <button type="button" class="next-small next-small-4">
+                Finalize
+              </button>
+            </div>
+          </div>
+          <!-- Step 6 -->
+          <div class="appointment-info step-6">
+            <div class="request">
+              <div class="complete">
+                <h2>Appointment Request Complete</h2>
+                <i class="fas fa-check-circle"></i>
+              </div>
+              <div class="appointment-number">
+                <h3>#000000</h3>
+              </div>
+            </div>
+            <div class="alert">
+              <i class="fas fa-exclamation-circle"></i>
+              <h3>
+                You will receive a confirmation by email that this process was
+                complete. If you dont receive an email with in 10 minutes, check
+                your junk or spam folder. If you need to change anything please
+                call us or send us an email.<a
+                  class="emailmain"
+                  href="mailto:Appointments@bulletmotorworks.com"
+                >
+                  Appointments@bulletmotorworks.com</a
+                >
+              </h3>
+            </div>
+            <div class="thanks">
+              <h3>Thank You!</h3>
+              <h4>
+                Appointments can take up to 1 business day to be confirmed.
+              </h4>
+            </div>
+          </div>
+        </form>
+        <div class="up-arrow-container">
+          <a href="#jumbotron" class="up-arrow"></a>
+        </div>
+      </section>
+      <section id="media">
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="https://www.yelp.com/biz/bullet-performance-costa-mesa-2"
+              ><i class="fab fa-yelp"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-map-marker"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    src="https://kit.fontawesome.com/a1769dbfbd.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="main.js"></script>
+  <script src="datepicker.js"></script>
+</html>
